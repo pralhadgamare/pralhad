@@ -1,0 +1,120 @@
+SelectFlightFromList:
+
+1. Book Now Button: By.xpath("(//button[contains(text(),'Book Now')])[1]")
+
+
+Review Page:
+
+scroll down code:
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,1000)"); //Scroll vertically down by 1000 pixels
+or
+js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+
+2. Email address: By.xpath("//input[@id='txtEmailId']");
+
+
+3. continue Booking Button: 
+
+By.xpath("(//span[contains(text(), 'Continue Booking')])[2]");
+
+or
+
+By.xpath("(//span[@id='spnVerifyEmail'])");
+
+
+Travellers page:
+
+4. titleAdult0 click:
+By.xpath("//select[@id='titleAdult0']");
+
+5.   First Name		
+By.xpath("//input[@id='txtFNAdult0']");
+
+6. Last Name
+
+By.xpath("//input[@id='txtLNAdult0']");
+
+7. Seat Map - Choose your seats
+By.xpath("//span[contains(text(), 'Seat Map - Choose your seats')]");
+
+or
+
+By.xpath("//*[@id="seatArea"]/div[1]/div/span);
+
+available seats: 
+
+By.xpath("(//label[@class='s_seat_avl ng-scope'])[1]");
+
+
+
+8. Contact Details:
+
+By.xpath("//input[@id='txtCPhone']");
+
+
+9. checkbox:
+
+By.xpath("(//span[@class='tctxt ng-binding'])");
+cmark_cbox
+tctxt ng-binding
+
+10. Continue Booking:
+
+By.xpath("//span[@id='spnTransaction']");
+
+
+Skip to Payment:
+
+By.xpath("//a[@class='skipotp']");
+
+Payment:
+
+By.xpath("//span[@class='netbankingText payment-txt payGT1 blu']");
+By.xpath("//span[@class='walletText payment-txt payGT1 blu']");
+
+walletText payment-txt payGT1 blu
+
+ICICI bank:
+
+By.xpath("(//span[@class='ftn14 ng-binding'])[3]");
+phonepay:
+PhonePe
+By.xpath("//span[contains(text(),'PhonePe')]");
+Make Payment:
+
+
+By.xpath("//div[@class='mk-pym3']");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

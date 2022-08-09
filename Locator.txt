@@ -1,0 +1,106 @@
+Locators: A unique Property of any Object/Web Element.
+
+Types : 
+1.id
+2.name
+3.linkText
+4.partial link text
+5.Css Selector
+
+6.xpath
+7.tagname   >>>> Used in Case When You want make group of Object with Common Property
+9.ClassName
+
+//*[@id="txtPassword"]
+/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[3]/input
+Xpath Type:
+
+Absolute Xpath: 
+	1./html/body/form/div[3]/table/tbody/tr[2]/td[2]/input
+	2.Starts with Single '/'
+	3.Works for all Object 
+	4.But not Preferred in Projects since It is Page Layout dependant
+
+Relative Xpath
+SYntax 1 : 
+
+	//tagname[@id/name/value/class/type = 'value of that Property or Attribute']
+
+//input[@type='password']
+//*[@id="txtUserName"]
+//a[@href='/index.php/auth/requestPasswordResetCode']
+
+SYntax 2 :
+	//tagname[text()='value of that text']
+	//*[text()='Forgot password?']
+	//*[text()='( Username : Admin | Password : admin123 )']
+
+Syntax 3:  When Object is having Dynamic Property then in That case we can use contains
+	//tagname[contains(@id/name/value/type/class,'value of that Property ')]
+	//tagname[contains(text(),'value of Text')]
+
+//*[contains(text(),'admin123')]
+
+//*[contains(@name,'Password')]  > For PAssWord Field
+//*[contains(text(),'Forgot')]   > For Forgot PAssWord
+
+
+
+name=Password13545121245
+name=Password15455121245
+
+WHen to USe : When any Object is Not having Unique Property but some Object beside to it is having Unique Property
+
+
+//input[@name='txtPassword']/parent::td/preceding-sibling::td
+//a[text()='Best Practices']/parent::li/following-sibling::li[1]/a
+
+//a[text()='Change History']/parent::li/following-sibling::li[1]/a
+
+/ at starting means it is Absolute Xpath and Some Where in Xpath if it is used then it means immediate tag
+
+
+// at Start means Relative XPath 
+//form[@name='login']//*[@type='text']
+
+
+
+CSS:
+----
+1.Using id		>  	tagname#id
+					input#txtUsername
+
+2.Using Name/value/type/any property		
+			> tagname[name/type/value/any property/id='value of that property']
+			input[value='LOGIN']
+
+3.Using className:		> tagname.classname
+			input.button  		> For Login Button
+		
+
+
+Selenium Grid
+Selenium RC
+Selenium IDE
+Selenium WebDriver
+
+
+Open https://opensource-demo.orangehrmlive.com/
+And Enter invalid UserName & PassWOrd
+Then CLear It 
+Then Submit It 
+And Take ScreenSHot which contails Error Message  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,416 @@
+What is Java ?
+---------------------
+-It is High level Programming Language
+-Free & Open Source
+-WORA(Write Once & Run Aywhere) - It is platform independant
+-It is Easy to learn (All keywords are very similar to English Language)
+-Secure
+-Supports Multi-Threading (Multiple Functions can be run simultanously/parallely)
+
+
+Configurations Needs:
+-----------------------------
+1.JDK
+		It makes your system aware about what is java, protocols of Java etc.
+2.Editor i.e Notepad, Notepad++, Eclipse, Netbean
+		
+How to check system is having Java or Not ?
+		java -version
+
+
+JDK > When you want to Dev + Run 
+JRE > When you want to Just Run already Develop Application
+
+
+Java's Programme Execution Sequence:
+--------------------------------------------------
+
+A.java			>  Compiler > A.class (Bytecode-intermediate language) ->   JVM(Interpreter)
+				> converts into 0 & 1
+
+There is two execution in Java due to which java is platform indepenadant.
+
+
+1.Create Project
+2.Create Package
+3.Create Class
+
+
+Data Type:
+--------------
+int 
+boolean
+char
+byte
+float
+double
+short
+int
+long
+
+Arithmatic Operator:
+--------------------------
++
+-
+/
+*
+%
+
+
+Comparision Operator:
+>
+<
+>=
+<=
+==
+!=
+
+
+Logical Operators:
+&&  - AND
+||	    OR
+! 	    NOT
+
+
+String name;
+Human prem
+
+
+
+
+
+Loops: Needs> If you want to do something multiple time then use loop concept
+-----
+1.For Loop
+2.while
+3.Do_While
+4.For Each (Array, Collection( List, Set))
+
+
+
+1.for
+			fibonacci Series:
+			---------------------
+			a   b  c
+			0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+			    a   b c
+
+
+
+
+While
+-COndition  Check & then Do
+-Code may or may not execute depending on condition ( No garantee of Execution of  code for once)
+
+
+do_while
+-First Do & Check
+-Code gives garantee of execution at least for once
+
+https://github.com/vprem99/Batch10
+
+
+
+
+
+int num =1234
+		num/10= 123
+		num%10= 4
+
+
+		123/10= 12
+		123%10= 3		
+				
+
+		rem*10+rem
+		4*10+3 =43
+
+		12/10= 1
+		12%10=2
+
+		1/10= 0
+		1%10= 1
+		
+-------------------------------------------------------------------------------------
+Java OOPs
+
+
+Object:  Any real time entity which is having States & Beahvior
+
+
+States/Properties (These will be noun) 			>>> Variables
+		-BrandName
+		-Type
+		-Price
+		-Color
+		-Dimension
+
+
+
+Beahvior/Actions : (These are Verbs) 			>> Methods
+		-Writing
+		-Opening/Closing
+		-Changing Refill
+
+
+
+Class : Combination of relevent states & Behavior
+	   BluePrint of Object
+
+
+
+
+
+
+Static KeyWord: It is keyword which can be used with variables & Methods
+---------------------
+
+Adv:
+------
+1.It is used for memory managment
+2.It is also used for Quick access to some methods/variable as per requirements
+
+
+
+
+Inheritance: Getting property of  Parent Class to its Child Class
+--------------
+
+Loan Management System:
+---------------------------------
+Class Loan{
+200 loc
+}
+
+Class HomeLoan extends Loan				Class EducationLoan extends Loan				Class GoldLoan extends Loan
+{										{											{
+300 loc 									300 loc										300 loc
+}										}											}
+
+
+PersonalLoan extends Loan
+{
+300 loc
+}
+
+Total LOC : 2000
+Time: 24 hrs
+
+
+
+Total LOC: 1400
+time : 18 hrs
+
+
+Adv: 
+1.LOC will be Less
+2.Devloping time will be less
+3.If LOC is less application will be faster
+4.Application will be Easy to Change/ Maintain
+
+
+								
+
+
+Every Car IS-A Vehicle
+Every Bike IS-A Vehicle
+Every Truck IS-A Vehcile
+
+Vehicle{
+
+}
+
+
+Polymorphism:
+-------------------
+Many forms
+
+There will multiple methods with same name but different implementation
+
+
+
+
+1.Method Overriding
+		> There is need of two classes for this with parent & Child Relationship
+	  	> There is need of same method in parent also & in Child also but with different 				   implementation  for overriding code of Parent.
+
+
+		
+2.Method Overloading
+			> There is no need of Two Classes, Single Class is sufficient for this
+			> There are multiple methods in single class with same name but different 							implementation/arguments/data type. 
+		
+
+
+Constructor:
+1.It is having same name as ClassName
+2.It do not have return type
+
+
+
+Benefits: If you want to execute some set of code while making object of that class then you 			    can use constructor i.e initialization of class level variables/instance variable with 			    custom values.
+	
+
+
+
+Basic Encapsulation:
+Keeping relevent methods & variable into single unit will be called as Encapsulation
+
+But Security can be increased by using different access modifiers like public, private, protected etc.
+
+Encapsulation is also defined as Hidding Data for increasing security .
+
+
+private : Variable/ Method will not be visible outside of that class
+
+
+public: Visible EveryWhere
+private: Visible inside class Only
+protected/default: Visible within package only
+protected : It will give its protected mathod/ variable to its child even if it is outside package
+
+Encapsulation: It is hindding Data
+Abstraction: Showing necessary things after Hidding un-necessary things.
+
+
+Interface:
+------------
+
+Samsung 
+
+
+Interface is a set of Protocol/Rule
+
+Galaxy					Eseries				Jseries						Note
+D1							D2						D3							D4
+
+inCll						in_Call				incomingCall				incomingCalling
+
+
+
+21 > Abstract Class,Exception Handling, & Collection.
+
+
+Exception Handling:
+--------------------------
+
+It is used for handling abnormal termination of your programme. & Only Risky part is written inside in Exception handling part.
+By Keeping rissky part in try block rest LOC will be executed.
+
+
+		try{
+		// Keep your risky code here
+		}catch(ArithmaticException A){
+		.....
+		}
+		.
+		.
+		.
+		catch(Exception A){
+
+		}
+
+
+Kinds of Exception
+1.Checked : High Chance of Occurance  | Compile Time
+
+		i.e FileNotFoundException
+
+2.UnChecked:		Less Chance of Occurance   | Run Time
+
+		i.e ArithMaticException
+
+
+
+
+
+
+ExceptionHandlingExample.java   > compiler > ExceptionHandlingExample.class   > JVM(Interpreter)  > 01's 
+
+
+int []mobile=new int[20];
+
+
+
+
+Environment Needs for Selenium WebDriver:
+1.JDK
+2.Eclipse
+3.Selenium Java Libraries for Scripting in Java
+4.Drivers i.e chromedriver.exe for working with chrome browser
+		     geckodriver.exe for working with Firefox 
+		     operadriver.exe for opera browser
+
+
+
+There can be two types project 
+1.Java Project
+2.Maven Project
+
+The path to the driver executable must be set by the webdriver.chrome.driver system property;
+
+
+Selenium Locators: Locators are unique property by which selenium finds that object/element/WebElement 
+------------------------
+1.id
+2.name
+3.linkText
+4.css
+5.Xpath
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cascading Style sheet Format:
+-----------------------
+1.CSS with ID
+	tagname#id
+2.CSS with name/type/value/any property
+	tagname[name/type/value/any property='value of that property']
+
+3.CSS with ClassName
+	tagname.classname
+
+Xpath: It is sequence collection of html Nodes
+1.Absolute Xpath
+	/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[5]/div/a
+	>It always starts with single '/' 
+	>It is not recommended for Project Since It Page layout dependant
+
+2.Relative xpath
+	//*[@id='forgotPasswordLink']/a
+	>It always starts with '//'
+	>It is recommended for Project since it is not dependant on Page layout
+
+
+Working with dropDown:
+-------------------------------
+
+
+
+
+
+
+findElement : Used for working with single Object which is having unique Property
+			 Return type is WebElement
+			  If Element is not found then NoSuchElementException
+
+findElements: Used for working with working with multiple objects which having common property
+			Return type is List<WebElement>
+			If Element is not found then It returns empty list
+
+
+
+
+Day  8: 
+1.Selenium COnfiguration for Eclipse
+2.Staring browser & Closing it
+3.Opening link
+4.Getting title
+5.What is Locator & thier types : id, name, linkText
+
+Day9:
+>CSS & Xpath locators
+>DropDown
+>findElements(Working with multiple Object)
+>Taking UserInput in Selenium Script
