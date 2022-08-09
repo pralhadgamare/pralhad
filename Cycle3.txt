@@ -1,0 +1,96 @@
+What is Locators : A unique property/attribute by which selenium locators/finds that 						object
+
+
+Types of Locators:
+------------------
+1.id
+2.name
+3.linkText / partiallinkText  : Object having tag as a & before ending some text is 											given that will be linkText
+4.CSS
+5.Xpath
+
+6.tagname  > Used in Case When You want make group of Object with Common Property
+7.className
+
+Aqm
+	Interface: 			public void type();					WebDriver
+						click()
+						select()
+
+
+
+findElement							
+
+SBI					Edelweiss					BDB 						ShareKhan
+
+T1						T2							T3							T4
+
+type					sendKeys					typeKey					typingKey
+click()					click(String Xpath)					
+
+
+
+
+
+
+Interface:
+-------------
+
+
+WebDriver is interface & ChromeDriver, FirefoxDriver, OperaDriver are classe which implements WebDriver
+WebDriver is Parent  & ChromeDriver, FirefoxDriver, OperaDriver are child
+
+WebDriver driver=new ChromeDriver()   // Parent p=new Child
+ Here driver is Parent type since in run time user might change execution to any browser & my driver should 
+ be able to hold object of any browser.
+
+Limitation: Extra Method of ChromeDriver will be get Hide/Masked
+ ChromeDriver driver=new ChromeDriver(); // Can you write this ? Yes but It will work on only chrome
+
+
+What is Maven:
+1.It is Project Management Tool which gives Template/Blue print of the Project as below
+		src/main/java		> Normal Pojo Classes
+		src/main/resources	> Text file, json file, property file,excel file etc. supporting to src/main/java
+		src/test/java		> All TestNG/Junit Classes
+		src/test/resources	>Text file, json file, property file,excel file etc. supporting to src/test/java
+
+2.It is also known as build management tool: 
+		It Manages build creation process. Combining all classes into single unit & converting to machine understanble file
+
+3.It manages all dependancies.
+	
+
+
+
+Synchronization Problem/AJAX Call:
+
+When there is speed mismatch between 2 things .. Selenium & AUT(OrangeHRM)
+To solve this problem
+1.Java  Feature: Thread.sleep() //Not Recommended
+2.Selenium Feature:
+		1.implicit wait
+		2.explicit Wait
+		3.Fluent Wait
+
+
+Selenium Waits
+1.Implicit Wait  > It takes only Desired time
+					> It is global wait (Need to Declare at Once and Applicable till last. 	Aplicable for All Objects )
+					>It Waits only for Visibility
+					>NosuchElementException
+
+2.WebDriverWait / Explicit Wait
+			>Has capability to wait for Visibility, invisibility, text, alert, frame, window etc
+			>TimeOutException
+			>Polling time/interval of checking 500 ms
+		WebDriverWait wt=new WebDriverWait(driver, Duration.ofSeconds(10));  // WebDriverWait 		initilization
+		wt.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Logout13"))); 
+
+3.FluentWait /Explicit Wait
+			>Used When Processing time is going to be taken long
+			>Changing Polling Time is available in Fluent Wait
+			>You can ignore some kind of Exception
+			>TimeOutException is thrown if Object is not found
+
+
